@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript Summary</title>
+<style>
+    body {
+        font-family: 'Inter', 'Roboto', Arial, sans-serif;
+        background-color: #fafafa;
+        color: #222;
+        line-height: 1.6;
+        padding: 20px;
+        margin: 0;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .date { font-size: 1em; color: #666; margin-top: 1em; }
+    .teacher { font-weight: bold; font-size: 1.3em; margin-top: 2em; color: #0055aa; }
+    .topic { font-style: italic; font-size: 1.2em; margin-top: 1.5em; color: #aa5500; }
+    .objective { font-size: 1.1em; margin-top: 1em; color: #5500aa; font-weight: 600; }
+    .subtopic { font-weight: bold; font-size: 1.1em; margin-top: 1em; color: #008800; }
+    .exercises { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa0055; }
+    .vocab { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #0088aa; }
+    .culture { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa8800; }
+    .key-points { font-weight: bold; font-size: 1.15em; margin-top: 1.5em; color: #550088; }
+    .summary { font-size: 1.1em; margin-top: 1.5em; padding: 15px; background-color: #f0f0f0; border-left: 4px solid #0055aa; }
+    
+    p { margin-bottom: 1em; margin-left: 0; }
+
+    /* Subtopic paragraphs indented */
+    .subtopic + p { margin-left: 20px; }
+
+    ul { margin-left: 20px; margin-bottom: 1em; }
+
+    /* Dark mode */
+    body.dark-mode { background-color: #1e1e1e; color: #f5f5f5; }
+    .dark-mode .date { color: #999; }
+    .dark-mode .teacher { color: #66aaff; }
+    .dark-mode .topic { color: #ffaa66; }
+    .dark-mode .objective { color: #aa88ff; }
+    .dark-mode .subtopic { color: #77dd77; }
+    .dark-mode .exercises { color: #ff66aa; }
+    .dark-mode .vocab { color: #66ddff; }
+    .dark-mode .culture { color: #ffdd66; }
+    .dark-mode .key-points { color: #bb88ff; }
+    .dark-mode .summary { background-color: #2a2a2a; border-left-color: #66aaff; }
+
+    /* Toggle button */
+    .dark-toggle {
+        position: fixed; top: 20px; right: 20px;
+        background-color: #222; color: #fafafa;
+        border: none; padding: 10px 15px;
+        cursor: pointer; border-radius: 5px;
+        font-size: 14px; transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode .dark-toggle { background-color: #f5f5f5; color: #222; }
+</style>
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<div class="container"> 
+    <h1>TRANSCRIPTION D'UNE LEÇON D'HISTOIRE POLONAISE</h1>
+    <div id="content"></div>
+</div>
+
+<script>
+const rawTranscript = `
+
+[DATE] 2025-10-09
+[TEACHER] Non mentionné (enseignante d'histoire)
+[LESSON TOPIC] Le Royaume de Pologne (Royaume du Congrès) 1815-1830 - Organisation politique et économique après le Congrès de Vienne
+[OBJECTIVE] Comprendre la structure politique du Royaume de Pologne créé en 1815, analyser sa constitution, son système gouvernemental (séparation des pouvoirs), et évaluer le degré d'autonomie sous domination russe.
+
+[SUBTOPIC] Introduction et contexte : Le Congrès de Vienne (1814-1815)
+Explication :
+Le cours commence par un test sur la matière précédente, suivi d'une révision du Congrès de Vienne qui a divisé les territoires polonais entre trois puissances : la Russie (qui a obtenu la majeure partie du Duché de Varsovie pour créer le Royaume de Pologne), la Prusse (qui a récupéré le Grand-Duché de Poznań), et l'Autriche (qui contrôlait la Galicie). La République de Cracovie a été établie comme ville libre sous contrôle des trois puissances. L'enseignante souligne que le Duché de Varsovie ne représentait pas tous les territoires de l'ancienne République des Deux Nations (Rzeczpospolita).
+[EXERCISES]:
+
+Test écrit sur la matière précédente (durée : première heure de cours)
+Analyse de cartes géographiques montrant les divisions territoriales
+Travail avec des documents à coller dans les cahiers (wklejka)
+
+[VOCAB]:
+
+Kongres Wiedeński – Congrès de Vienne
+Królestwo Polskie / Królestwo Kongresowe – Royaume de Pologne / Royaume du Congrès
+Księstwo Warszawskie – Duché de Varsovie
+Ziemie zabrane – Territoires confisqués (terres de l'ancienne République incorporées à la Russie)
+Rzeczpospolita Krakowska – République de Cracovie
+Galicja – Galicie (sous contrôle autrichien)
+Wielkie Księstwo Poznańskie – Grand-Duché de Poznań (sous contrôle prussien)
+Zabór – Partition
+
+[CULTURE]:
+Le contexte historique remonte à 1795, lorsque la Pologne a disparu de la carte européenne après les trois partitions. Les légionnaires polonais ont combattu aux côtés de Napoléon en Italie (1797) dans l'espoir de restaurer l'indépendance. Le Duché de Varsovie (1807-1815) a été créé par Napoléon après ses victoires contre la Prusse et l'Autriche, mais n'a existé que huit ans avant d'être divisé lors du Congrès de Vienne.
+
+[SUBTOPIC] La Galicie : Composition ethnique et géographique
+Explication :
+L'enseignante explique en détail la région de Galicie, aujourd'hui principalement située en Ukraine moderne, avec une partie mineure en Pologne. La population était majoritairement ruthène/ukrainienne, surtout à l'est, tandis que l'ouest (Tarnów, Nowy Sącz, Cracovie) était plus polonais. Lviv (Lwów) constituait une exception notable, étant presque entièrement peuplée de Polonais. Les principales villes étaient Lviv, Tarnów, Przemyśl et Nowy Sącz. Le centre de la Galicie était essentiellement rural, sans grandes villes.
+[VOCAB]:
+
+Lwów – Lviv (aujourd'hui en Ukraine, historiquement ville polonaise majeure)
+Mniejszość – Minorité
+Rusini / Ukraińcy – Ruthènes / Ukrainiens
+Zasiedlenie – Peuplement
+
+[CULTURE]:
+Aujourd'hui encore, Lviv compte une importante minorité polonaise et est considérée comme "notre ville" par de nombreux Polonais. Cette dimension ethnique sera importante pour comprendre les événements ultérieurs de l'histoire polonaise.
+
+[SUBTOPIC] La Constitution du Royaume de Pologne (1815)
+Explication :
+L'enseignante présente la constitution comme l'un des documents les plus libéraux d'Europe à l'époque, bien qu'elle ait été "octroyée" par le tsar Alexandre Ier. Adam Jerzy Czartoryski, ami personnel du tsar et opposant rare à Napoléon parmi les Polonais, en était l'auteur principal. La constitution garantissait la liberté de la presse et de religion, l'égalité devant la loi, et l'inviolabilité personnelle. Cependant, elle a été modifiée par Nicolas Novosiltsov et le tsar lui-même pour renforcer les prérogatives monarchiques. Promulguée solennellement le 27 novembre 1815.
+[VOCAB]:
+
+Konstytucja – Constitution
+Liberalna konstytucja – Constitution libérale
+Oktrojowana konstytucja – Constitution octroyée (accordée par le monarque)
+Wolność druku – Liberté de la presse
+Wolność wyznania – Liberté de religion
+Równość wobec prawa – Égalité devant la loi
+Nietykalność osobista – Inviolabilité personnelle
+Adam Jerzy Czartoryski – Prince Adam Jerzy Czartoryski (auteur de la constitution)
+Car Aleksander I Romanow – Tsar Alexandre Ier Romanov
+
+[CULTURE]:
+Cette constitution représentait un phénomène unique : la Russie était une monarchie absolue, tandis que le Royaume de Pologne bénéficiait d'une monarchie constitutionnelle. Le tsar était contraint de respecter ces droits en Pologne, même s'ils n'existaient pas en Russie. L'enseignante souligne que tous ces privilèges seront progressivement supprimés après les soulèvements (novembre 1830 et janvier 1863).
+
+[SUBTOPIC] Structure gouvernementale : Le pouvoir exécutif
+Explication :
+Le roi de Pologne était le tsar de Russie (Alexandre Ier Romanov), qui résidait à Saint-Pétersbourg et non à Varsovie. En son absence, le pays était administré par un vice-roi (namiestnik). Le premier vice-roi fut le général Józef Zajączek, un Polonais décrit comme "timide comme un lièvre" – soumis et sans volonté propre face au tsar. Le grand-duc Constantin Romanov, frère d'Alexandre, était commandant suprême de l'armée polonaise. Bien que théoriquement le vice-roi soit plus important, Constantin exerçait un pouvoir réel considérable en contrôlant l'armée.
+Le Conseil d'Administration (Rada Administracyjna) constituait le gouvernement, composé de cinq ministères :
+
+Culte et Éducation publique
+Justice
+Affaires intérieures et police
+Revenus et Trésor
+Guerre
+
+[VOCAB]:
+
+Namiestnik – Vice-roi, représentant du monarque
+Generał Józef Zajączek – Général Józef Zajączek (premier vice-roi)
+Wielki Książę Konstanty Romanow – Grand-duc Constantin Romanov
+Naczelny dowódca – Commandant suprême
+Rada Administracyjna – Conseil d'Administration (gouvernement)
+Minister – Ministre
+Władza wykonawcza – Pouvoir exécutif
+
+[CULTURE]:
+L'enseignante utilise une métaphore mémorable : Zajączek (qui signifie "petit lièvre") était effectivement comme un lièvre – craintif, fuyant, sans opinions propres. Constantin Romanov était une figure noire pour les Polonais : psychopathe qui imposait une discipline de fer dans l'armée, infligeant punitions et humiliations pour les moindres fautes. Beaucoup de soldats se suicidaient sous la pression. Paradoxalement, il aimait la Pologne et les Polonais, était même marié à une Polonaise, mais les Polonais ne lui rendaient pas cette affection, particulièrement les soldats qui le détestaient.
+
+[SUBTOPIC] Le pouvoir législatif : La Diète (Sejm)
+Explication :
+Le Sejm bicaméral constituait le pouvoir législatif. La Chambre des Députés (Izba Poselska) comptait 128 membres : 77 nobles élus dans les diétines (sejmiki) et 51 députés élus par les assemblées communales. Les droits électoraux étaient étendus non seulement à la noblesse, mais aussi aux paysans riches, bourgeois aisés, clergé séculier et représentants du monde académique. Le Sénat, chambre haute, ne pouvait dépasser la moitié des membres de la chambre basse (maximum 64 personnes) et comprenait 9 évêques, 18 voïvodes et 37 castellans.
+Selon la constitution, le Sejm devait être convoqué tous les deux ans pour une durée de trente jours. Ses prérogatives incluaient : voter les lois proposées par le roi, approuver le budget, contrôler le gouvernement, et pouvoir accuser un ministre de violation de la constitution.
+[VOCAB]:
+
+Sejm – Diète, parlement
+Izba Poselska – Chambre des Députés
+Senat – Sénat
+Poseł – Député
+Senator – Sénateur
+Władza ustawodawcza – Pouvoir législatif
+Sejmik – Diétine (assemblée locale de la noblesse)
+Prawo wyborcze – Droit de vote
+Budżet – Budget
+Uchwalać prawo – Voter des lois
+
+[CULTURE]:
+L'extension du droit de vote au-delà de la noblesse était progressive pour l'époque. Cependant, l'enseignante souligne une contradiction importante : bien que la constitution stipule que le Sejm doit être convoqué tous les deux ans, le tsar Alexandre ne respectait pas toujours cette disposition. Si le Sejm n'était pas convoqué, aucun changement ne pouvait avoir lieu dans l'État, ce qui donnait au monarque un contrôle indirect considérable.
+
+[SUBTOPIC] Les pouvoirs du roi (tsar)
+Explication :
+Le roi de Pologne (tsar de Russie) disposait de pouvoirs considérables qui faisaient presque de lui un dictateur : il dirigeait l'appareil administratif du pouvoir exécutif, était commandant suprême des forces armées, possédait le droit d'initiative législative, pouvait opposer son veto à toute décision du Sejm, convoquait et dissolvait le Sejm, nommait les plus hauts fonctionnaires, et pouvait même émettre des décrets pour contourner complètement la législation polonaise. Il avait également le pouvoir de modifier la constitution.
+[VOCAB]:
+
+Król dziedziczny – Roi héréditaire
+Inicjatywa prawodawcza – Initiative législative
+Prawo weta – Droit de veto
+Dekret – Décret
+Monarchia konstytucyjna – Monarchie constitutionnelle
+Monarchia absolutna – Monarchie absolue
+
+[CULTURE]:
+L'enseignante fait une distinction cruciale : la Pologne avait une monarchie constitutionnelle avec séparation des pouvoirs, tandis que la Russie restait une monarchie absolue. C'était un phénomène unique dans l'empire russe. Cependant, les pouvoirs étendus du monarque limitaient considérablement l'autonomie réelle. L'enseignante note aussi que le tsar collaborait étroitement avec l'aristocratie polonaise conservatrice (comme le prince Czartoryski), qui ne soutenait pas les révolutions ou soulèvements, garantissant ainsi une base de soutien loyale parmi les Polonais eux-mêmes.
+
+[SUBTOPIC] Le pouvoir judiciaire et les droits des citoyens
+Explication :
+Le système comportait des tribunaux indépendants avec liberté de jugement garantie. La constitution assurait aux citoyens du Royaume de Pologne : la liberté de la presse et de religion, l'égalité devant la loi, l'inviolabilité personnelle, le droit à l'éducation en polonais, et la possibilité de traiter les affaires administratives en langue polonaise. Ces droits n'existaient pas dans le reste de l'Empire russe ni pour les Polonais vivant sur les "territoires confisqués" (comme Vilnius ou Białystok), qui devaient fréquenter des écoles russes et servir dans l'armée russe.
+[VOCAB]:
+
+Władza sądownicza – Pouvoir judiciaire
+Niezależne sądy – Tribunaux indépendants
+Wolność orzekania – Liberté de jugement
+Prawa obywatelskie – Droits civiques
+Język urzędowy – Langue officielle/administrative
+
+[CULTURE]:
+L'enseignante insiste sur le fait que cette autonomie ne concernait que le Royaume de Pologne proprement dit. Les Polonais vivant ailleurs dans l'Empire russe ne bénéficiaient d'aucun de ces privilèges. Elle avertit également les étudiants que tous ces droits seront progressivement supprimés après les soulèvements : la constitution sera abolie, la liberté de parole disparaîtra, la religion sera persécutée, l'inviolabilité personnelle violée, la langue russe sera imposée (russification), et l'armée polonaise sera dissoute.
+
+[SUBTOPIC] Développement économique (1815-1830)
+Explication :
+La période 1815-1830 fut très favorable au Royaume de Pologne. L'économie se développait, enrichissant les Polonais, et l'autonomie créait des conditions favorables au développement de la culture et de l'éducation polonaises. Franciszek Ksawery Drucki-Lubecki, ministre des Finances, fut le principal artisan de cette prospérité. Il créa la Banque de Pologne et la Société de Crédit Foncier (Towarzystwo Kredytowe Ziemskie), qui accordait des prêts à faible taux d'intérêt à la noblesse terrienne pour moderniser leurs exploitations. Il encouragea la culture de plantes nouvelles (pommes de terre, trèfle). Les droits de douane avec la Russie furent supprimés, favorisant le commerce.
+L'industrie se développa avec des aciéries et des usines. L'urbanisation progressa, notamment à Łódź qui passa d'un petit village à une grande ville industrielle célèbre pour son industrie textile. Le district industriel de Łódź devint important, bien que les conditions des ouvriers y fussent difficiles (l'enseignante recommande le film "Ziemia Obiecana" / "La Terre Promise" pour illustrer cette réalité). Des universités furent restaurées à Vilnius et créées à Varsovie.
+[EXERCISES]:
+
+Analyse du texte du manuel (pages 76-78) sur les initiatives économiques
+Identification des termes en gras dans le texte
+Prise de notes sur les principales institutions et investissements
+
+[VOCAB]:
+
+Franciszek Ksawery Drucki-Lubecki – Ministre des Finances
+Bank Polski – Banque de Pologne
+Towarzystwo Kredytowe Ziemskie – Société de Crédit Foncier
+Ziemiaństwo – Noblesse terrienne (nouveau terme pour désigner la noblesse au XIXe siècle)
+Industrializacja – Industrialisation
+Urbanizacja – Urbanisation
+Łódzki okręg przemysłowy – District industriel de Łódź
+Przemysł włókienniczy – Industrie textile
+Cło – Droit de douane, taxe douanière
+Huta – Aciérie
+Fabryka – Usine
+Kredyt nisko oprocentowany – Prêt à faible taux d'intérêt
+
+[CULTURE]:
+L'enseignante souligne le paradoxe de Łódź : bien que le développement industriel soit positif économiquement, la ville devint un grand centre ouvrier urbanisé où la situation des travailleurs était mauvaise, similaire à celle de la Grande-Bretagne au début de la révolution industrielle. Ce thème avait déjà été abordé dans le premier chapitre. Le terme "ziemiaństwo" remplace progressivement "szlachta" (noblesse) au XIXe siècle pour désigner les propriétaires terriens.
+
+[SUBTOPIC] Divisions politiques et perspectives d'avenir
+Explication :
+L'enseignante soulève une question cruciale pour la suite du cours : fallait-il continuer à lutter pour l'indépendance totale, ou se satisfaire de l'autonomie existante ? La société polonaise était divisée sur cette question. Certains (comme Adam Jerzy Czartoryski) croyaient que le tsar Alexandre tiendrait sa promesse d'agrandir le Royaume de Pologne en y incorporant les "territoires confisqués" – ce qui aurait considérablement augmenté sa taille. D'autres étaient déçus, comme Tadeusz Kościuszko qui, estimant que les Polonais avaient encore une fois été trompés, retourna en Suisse et ne participa plus jamais activement à la politique.
+Pour réussir un soulèvement, les Polonais devaient être unis. Tant qu'ils possédaient une armée (même petite, environ 15 000 hommes), des généraux et un état-major, une action militaire était envisageable. Mais après la dissolution de l'armée polonaise suite au soulèvement de novembre 1830, les futurs soulèvements (comme celui de janvier 1863) devraient être organisés sans armée régulière, sur une base volontaire (levée en masse), ce qui réduirait considérablement les chances de succès.
+[VOCAB]:
+
+Powstanie – Soulèvement, insurrection
+Powstanie listopadowe – Soulèvement de novembre (1830)
+Powstanie styczniowe – Soulèvement de janvier (1863)
+Niezależność – Indépendance
+Suwerenność – Souveraineté
+Jednomyślność – Unanimité, consensus
+Konspiracja – Conspiration
+Pospolite ruszenie – Levée en masse
+Regularne wojsko – Armée régulière
+Lojalizm – Loyalisme
+
+[CULTURE]:
+L'enseignante utilise une analogie avec la classe : pour qu'un projet collectif réussisse, il faut un consensus. Plus il y a de divisions et d'opinions divergentes, plus il est difficile d'agir efficacement. Les Polonais de l'époque étaient divisés entre conservateurs (aristocratie qui coopérait avec le tsar), modérés (qui espéraient obtenir plus par la loyauté) et radicaux (qui voulaient l'indépendance complète). Elle note aussi que certains n'avaient rien à perdre (classes populaires) tandis que d'autres avaient beaucoup à perdre (aristocratie, bourgeoisie prospère) – facteur important dans la décision de participer ou non aux soulèvements.
+
+[SUBTOPIC] Méthodologie et ressources pédagogiques
+Explication :
+L'enseignante utilise plusieurs supports pédagogiques : le manuel scolaire (pages 76-78), des documents à coller dans les cahiers (wklejka), des cartes géographiques, et recommande une vidéo YouTube de la chaîne "Bażanin" intitulée "Utworzenie Królestwa Polskiego 1815" (Création du Royaume de Pologne 1815). Cette chaîne propose une playlist "Lekcje Historii" (Leçons d'Histoire) consacrée exclusivement à l'histoire de Pologne, avec des vidéos d'une demi-heure ou plus. Une partie de la vidéo est visionnée en classe, l'enseignante encourageant les élèves à la terminer chez eux s'ils le souhaitent.
+[EXERCISES]:
+
+Prise de notes structurée pendant le cours
+Analyse de documents dans le manuel
+Visionnage partiel d'une vidéo éducative
+Travail autonome recommandé à la maison
+
+[CULTURE]:
+L'enseignante mentionne aussi l'œuvre "Dziady" (Les Aïeux) d'Adam Mickiewicz, que les élèves ont déjà étudiée dans leurs cours de littérature romantique. Cette œuvre présente Constantin Romanov sous un jour très négatif, reflétant l'opinion populaire polonaise de l'époque.
+
+[KEY POINTS]
+
+Le Congrès de Vienne (1814-1815) a divisé les territoires polonais entre la Russie (Royaume de Pologne/Royaume du Congrès), la Prusse (Grand-Duché de Poznań) et l'Autriche (Galicie), avec la République de Cracovie comme ville libre.
+La Constitution de 1815 était l'une des plus libérales d'Europe, garantissant liberté de presse, de religion, égalité devant la loi, usage de la langue polonaise, armée distincte et système éducatif propre – privilèges inexistants dans le reste de l'Empire russe.
+Séparation des pouvoirs : Pouvoir exécutif (roi/tsar + vice-roi + Conseil d'Administration), pouvoir législatif (Sejm bicaméral : Chambre des Députés et Sénat), pouvoir judiciaire (tribunaux indépendants) – système de monarchie constitutionnelle unique dans l'empire russe absolutiste.
+Figures clés : Tsar Alexandre Ier Romanov (roi de Pologne), Adam Jerzy Czartoryski (auteur de la constitution, conservateur pro-russe), Général Józef Zajączek (premier vice-roi, soumis), Grand-duc Constantin Romanov (commandant de l'armée, psychopathe détesté), Franciszek Ksawery Drucki-Lubecki (ministre des Finances, artisan de la prospérité).
+Développement économique (1815-1830) : Création de la Banque de Pologne et de la Société de Crédit Foncier, suppression des droits de douane avec la Russie, industrialisation (notamment district textile de Łódź), urbanisation, et développement culturel (universités de Varsovie et Vilnius).
+Contradictions et tensions : Bien que jouissant d'une autonomie notable, le Royaume restait sous domination russe ; le tsar possédait des pouvoirs étendus (veto, initiative législative, convocation/dissolution du Sejm, décrets) limitant l'autonomie réelle ; la société polonaise était divisée entre ceux qui acceptaient cette situation et ceux qui voulaient l'indépendance totale.
+Préfiguration des soulèvements : Tous ces privilèges seront progressivement supprimés après les soulèvements de novembre 1830 et janvier 1863 – perte de la constitution, de l'armée, russification, persécution religieuse, fermeture des universités – transformant l'autonomie en répression.
+
+
+[SUMMARY]
+Cette leçon d'histoire polonaise du 9 octobre 2025 porte sur le Royaume de Pologne (Royaume du Congrès) créé en 1815 après le Congrès de Vienne, période considérée comme la plus favorable sous la domination russe (1815-1830). Après un test sur la matière précédente, l'enseignante analyse en détail la structure politique unique de ce royaume : une monarchie constitutionnelle avec séparation des pouvoirs (exécutif, législatif, judiciaire) au sein d'un empire russe absolutiste. La Constitution de 1815, rédigée par Adam Jerzy Czartoryski et octroyée par le tsar Alexandre Ier, était l'une des plus libérales d'Europe, garantissant libertés civiques, usage du polonais, armée distincte et système éducatif propre. Le cours examine les principales figures (vice-roi Józef Zajączek, grand-duc Constantin Romanov) et le développement économique remarquable sous l'égide du ministre Drucki-Lubecki (banques, industrialisation, urbanisation de Łódź). L'enseignante souligne néanmoins les contradictions du système : pouvoirs étendus du tsar, autonomie limitée aux seuls territoires du Royaume (excluant les "territoires confisqués"), et divisions au sein de la société polonaise entre conservateurs loyalistes et partisans de l'indépendance totale. Elle avertit que tous ces privilèges seront supprimés après les soulèvements de 1830 et 1863, transformant progressivement l'autonomie en répression – thèmes qui seront abordés dans les prochaines leçons. Le cours utilise diverses ressources pédagogiques (manuel, cartes, vidéos YouTube de la chaîne "Bażanin") et encourage l'analyse critique de cette période historique complexe.
+
+`;
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+function renderTranscript(raw) {
+    const content = document.getElementById('content');
+    content.innerHTML = ''; // clear previous
+
+    const lines = raw.split('\n');
+    let currentList = null;
+
+    lines.forEach(line => {
+        line = line.trim();
+        if (!line) return;
+
+        let div;
+        if (line.startsWith('[DATE]')) {
+            div = document.createElement('div');
+            div.className = 'date';
+            div.textContent = 'Date : ' + line.replace('[DATE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[TEACHER]')) {
+            div = document.createElement('div');
+            div.className = 'teacher';
+            div.textContent = 'Enseignant(e) : ' + line.replace('[TEACHER]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[LESSON TOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'topic';
+            div.textContent = 'Sujet : ' + line.replace('[LESSON TOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[OBJECTIVE]')) {
+            div = document.createElement('div');
+            div.className = 'objective';
+            div.textContent = 'Objectif : ' + line.replace('[OBJECTIVE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUBTOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'subtopic';
+            div.textContent = 'Sous-thème : ' + line.replace('[SUBTOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[EXERCISES]')) {
+            div = document.createElement('div');
+            div.className = 'exercises';
+            div.textContent = 'Exercices : ' + line.replace('[EXERCISES]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[VOCAB]')) {
+            div = document.createElement('div');
+            div.className = 'vocab';
+            div.textContent = 'Vocabulaire : ' + line.replace('[VOCAB]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[CULTURE]')) {
+            div = document.createElement('div');
+            div.className = 'culture';
+            div.textContent = 'Culture : ' + line.replace('[CULTURE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[KEY POINTS]')) {
+            div = document.createElement('div');
+            div.className = 'key-points';
+            div.textContent = 'Points clés : ' + line.replace('[KEY POINTS]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUMMARY]')) {
+            div = document.createElement('div');
+            div.className = 'summary';
+            div.textContent = 'Résumé : ' + line.replace('[SUMMARY]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('- ')) { // bullet point
+            if (!currentList) {
+                currentList = document.createElement('ul');
+                content.appendChild(currentList);
+            }
+            const li = document.createElement('li');
+            li.textContent = line.substring(2).trim();
+            currentList.appendChild(li);
+            return;
+        } else { // normal paragraph
+            div = document.createElement('p');
+            div.textContent = line;
+            currentList = null;
+        }
+
+        content.appendChild(div);
+    });
+}
+
+// Automatically render transcript on page load
+renderTranscript(rawTranscript);
+</script>
+
+</body>
+</html>

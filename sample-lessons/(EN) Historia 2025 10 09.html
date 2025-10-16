@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript Summary</title>
+<style>
+    body {
+        font-family: 'Inter', 'Roboto', Arial, sans-serif;
+        background-color: #fafafa;
+        color: #222;
+        line-height: 1.6;
+        padding: 20px;
+        margin: 0;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .date { font-size: 1em; color: #666; margin-top: 1em; }
+    .teacher { font-weight: bold; font-size: 1.3em; margin-top: 2em; color: #0055aa; }
+    .topic { font-style: italic; font-size: 1.2em; margin-top: 1.5em; color: #aa5500; }
+    .objective { font-size: 1.1em; margin-top: 1em; color: #5500aa; font-weight: 600; }
+    .subtopic { font-weight: bold; font-size: 1.1em; margin-top: 1em; color: #008800; }
+    .exercises { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa0055; }
+    .vocab { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #0088aa; }
+    .culture { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa8800; }
+    .key-points { font-weight: bold; font-size: 1.15em; margin-top: 1.5em; color: #550088; }
+    .summary { font-size: 1.1em; margin-top: 1.5em; padding: 15px; background-color: #f0f0f0; border-left: 4px solid #0055aa; }
+    
+    p { margin-bottom: 1em; margin-left: 0; }
+
+    /* Subtopic paragraphs indented */
+    .subtopic + p { margin-left: 20px; }
+
+    ul { margin-left: 20px; margin-bottom: 1em; }
+
+    /* Dark mode */
+    body.dark-mode { background-color: #1e1e1e; color: #f5f5f5; }
+    .dark-mode .date { color: #999; }
+    .dark-mode .teacher { color: #66aaff; }
+    .dark-mode .topic { color: #ffaa66; }
+    .dark-mode .objective { color: #aa88ff; }
+    .dark-mode .subtopic { color: #77dd77; }
+    .dark-mode .exercises { color: #ff66aa; }
+    .dark-mode .vocab { color: #66ddff; }
+    .dark-mode .culture { color: #ffdd66; }
+    .dark-mode .key-points { color: #bb88ff; }
+    .dark-mode .summary { background-color: #2a2a2a; border-left-color: #66aaff; }
+
+    /* Toggle button */
+    .dark-toggle {
+        position: fixed; top: 20px; right: 20px;
+        background-color: #222; color: #fafafa;
+        border: none; padding: 10px 15px;
+        cursor: pointer; border-radius: 5px;
+        font-size: 14px; transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode .dark-toggle { background-color: #f5f5f5; color: #222; }
+</style>
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<div class="container"> 
+    <h1>History Lesson Summary</h1>
+    <div id="content"></div>
+</div>
+
+<script>
+const rawTranscript = `
+
+[DATE] 2025-10-09
+[TEACHER] Not explicitly mentioned (female teacher)
+[LESSON TOPIC] The Kingdom of Poland (Congress Poland) after the Congress of Vienna 1815
+[OBJECTIVE] Students should understand the political structure, constitution, autonomy, and governance of the Kingdom of Poland established after the Congress of Vienna, including its relationship with Russia and the administrative divisions of Polish lands among the partitioning powers.
+
+[SUBTOPIC] Introduction: Test Administration and Lesson Setup
+Explanation: The lesson began with students completing a test on previously covered material. The teacher collected phones during the test and informed students that corrections would be available within two weeks of receiving grades. Students needed to score at least half the points to achieve a passing grade (grade 3). The teacher mentioned that some content had been removed from the curriculum this year, making the material more manageable for students.
+
+[EXERCISES]: Written test on previous historical material; students worked on inserting worksheet materials into notebooks after completing the test.
+[VOCAB]:
+
+sprawdzian – test/quiz
+poprawa – correction/retake
+ocena – grade
+trójka – grade 3 (passing grade)
+
+
+[CULTURE]: Polish grading system uses 1-6 scale, where 3 is the minimum passing grade. Teachers in Poland typically have two weeks to grade assessments.
+
+
+[SUBTOPIC] Background: The Disappearance and Partial Restoration of Poland
+Explanation: The teacher reviewed that Poland disappeared from the map of Europe in 1795 after the Third Partition. Many participants of the Kościuszko Uprising fled to France, where they formed Polish Legions in Italy (1797) to fight against Austria. Napoleon Bonaparte later defeated Prussia and Austria, forcing them to return some Polish territories, which led to the creation of the Duchy of Warsaw. However, after Napoleon's defeat eight years later, Polish lands were again occupied by Russia and Prussia. The Congress of Vienna (1814) was convened to decide the future borders of European countries, with particular attention given to Poland.
+
+[EXERCISES]: Students analyzed maps showing territorial divisions.
+[VOCAB]:
+
+Legiony Polskie – Polish Legions
+Księstwo Warszawskie – Duchy of Warsaw
+Kongres Wiedeński – Congress of Vienna
+zaborcy – partitioners
+
+
+[CULTURE]: Polish volunteers fought alongside French forces hoping to regain independence. The Congress of Vienna represented a major disappointment for Polish national aspirations.
+
+
+[SUBTOPIC] Territorial Division After the Congress of Vienna
+Explanation: The Congress of Vienna granted most of the Duchy of Warsaw's lands to Russia. Prussia recovered only western Greater Poland (Wielkopolska) and Chełmno Land, establishing the Grand Duchy of Poznań, which remained dependent on the Prussian king. Kraków and its surroundings became the Free City of Kraków (Republic of Kraków), a small independent city-state under the supervision of all three partitioning powers. Russia created the Kingdom of Poland (also called Congress Poland or "Kongresówka") in 1815 on the acquired territories. The Kingdom had its own army, parliament (Sejm), and constitution, leading many Poles to hope that full independence could eventually be restored under Russian rule.
+
+[EXERCISES]: Map analysis identifying different Polish territories and their rulers.
+[VOCAB]:
+
+Wielkie Księstwo Poznańskie – Grand Duchy of Poznań
+Rzeczpospolita Krakowska – Republic of Kraków
+Królestwo Polskie/Kongresowe/Kongresówka – Kingdom of Poland/Congress Poland
+ziemie zabrane – taken lands (eastern territories annexed by Russia in earlier partitions)
+
+
+[CULTURE]: The term "ziemie zabrane" refers to territories taken in the first partitions, including large areas that today belong to Ukraine, Belarus, and Lithuania.
+
+
+[SUBTOPIC] Galicia: The Austrian Partition
+Explanation: The teacher explained that Galicia was the Austrian-controlled territory, located mostly in what is today Ukraine, with a smaller portion in modern Poland. The population was mixed, with more Ruthenians (Ukrainians) in the eastern areas and more Poles in western cities like Kraków, Tarnów, and Nowy Sącz. Lwów (Lviv) was an exception—it was almost entirely inhabited by Poles despite being located in the east. The teacher emphasized that Galicia was predominantly rural with few large cities, and that understanding this geography would be important for later lessons on uprisings.
+
+[EXERCISES]: Map study identifying Galicia's location and major cities.
+[VOCAB]:
+
+Galicja – Galicia
+Rusini – Ruthenians (Ukrainians)
+Lwów – Lviv
+mniejszość narodowa – national minority
+
+
+[CULTURE]: Lwów was a major Polish cultural center despite being in the eastern part of Galicia. Today it's part of Ukraine, but still has a significant Polish minority.
+
+
+[SUBTOPIC] Adam Jerzy Czartoryski and the Pro-Russian Orientation
+Explanation: Prince Adam Jerzy Czartoryski was one of the few Polish aristocrats who opposed Napoleon and supported cooperation with Russia. He was a personal friend of Tsar Alexander I Romanov and tried to advocate for Polish interests at the Congress of Vienna. Despite his efforts, the Congress resulted in Polish lands remaining under the partitioners' control, though this time Prussia ceded some territories (including Warsaw) to Russia. Czartoryski authored the constitution for the Congress Kingdom of Poland, though it was later modified by Tsar Alexander and Nikolai Novosiltsov to increase the monarch's powers.
+
+[EXERCISES]: Discussion of political orientation and loyalism.
+[VOCAB]:
+
+orientacja prorosyjska – pro-Russian orientation
+lojalizm – loyalism
+arystokracja – aristocracy
+książę – prince
+
+
+[CULTURE]: Polish nobility was divided between those who wanted to cooperate with Russia (conservatives like Czartoryski) and those who sought complete independence through armed struggle. Conservatives believed gradual reform was more practical than revolution.
+
+
+[SUBTOPIC] The Constitution of Congress Poland (1815)
+Explanation: On November 27, 1815, Tsar Alexander I granted Congress Poland a constitution, making it one of the most liberal constitutions in Europe at the time. However, it was an "octroyed" (granted) constitution, given by the monarch rather than created by the people. The constitution guaranteed freedom of press and religion, equality before the law, and personal inviolability. Polish was the official language in schools and government offices. The Kingdom had its own army (though subordinate to Russia) with Polish commanders and uniforms. Importantly, this autonomy existed only in Congress Poland—Poles living in other areas like Vilnius or Białystok had to use Russian in schools and government and serve in the Russian army.
+
+[EXERCISES]: Note-taking on constitutional provisions; analysis of autonomy features.
+[VOCAB]:
+
+konstytucja oktrojowana – granted/octroyed constitution
+autonomia – autonomy
+wolność druku – freedom of press
+wolność wyznania – freedom of religion
+równość wobec prawa – equality before the law
+nietykalność osobista – personal inviolability
+rusyfikacja – Russification
+germanizacja – Germanification
+
+
+[CULTURE]: This was a unique situation: Congress Poland had a constitutional monarchy while Russia itself was an absolute monarchy. This paradox created tensions and would not last. The teacher foreshadowed that uprisings would lead to the gradual elimination of these freedoms.
+
+
+[SUBTOPIC] Political Structure: The Monarch and Executive Power
+Explanation: The Russian Tsar served as the hereditary King of Poland but resided in St. Petersburg, not Warsaw. In his absence, he was represented by a viceroy (namiestnik). The first viceroy was General Józef Zajączek, a Polish general from the Napoleonic era, described as timid and submissive to the Tsar's will (the teacher used a mnemonic: his name means "little hare," suggesting he was easily frightened and compliant). The Tsar's brother, Grand Duke Konstantin Romanov, served as the Commander-in-Chief of the Polish Army. While the viceroy was formally more important, Konstantin wielded real power by controlling the military. The monarch had extensive powers including: directing the executive administration, serving as supreme military commander, initiating legislation, vetoing Sejm decisions, appointing and dismissing the Sejm, appointing high officials, and issuing decrees that could bypass Polish legislation.
+
+[EXERCISES]: Creating notes on the hierarchy of power; understanding the dual control system.
+[VOCAB]:
+
+namiestnik – viceroy
+władza wykonawcza – executive power
+wódz naczelny – supreme commander
+inicjatywa prawodawcza – legislative initiative
+prawo weta – veto power
+dekret – decree
+generał Józef Zajączek – General Józef Zajączek
+wielki książę Konstanty – Grand Duke Konstantin
+
+
+[CULTURE]: General Zajączek's submissiveness was characteristic of Polish officials who believed cooperation with Russia was the only realistic path. Konstantin Romanov was portrayed negatively in Polish Romantic literature (like Mickiewicz's works) as harsh and unpredictable, though he claimed to love Poland and even married a Polish woman. He was known for enforcing brutal military discipline, leading to soldier suicides.
+
+
+[SUBTOPIC] Government Structure: The Administrative Council
+Explanation: The government of Congress Poland was called the Administrative Council (Rada Administracyjna), headed by the viceroy. It consisted of five ministries: Religious Affairs and Public Enlightenment, Justice, Internal and Police Affairs, Revenue and Treasury, and War. The Council of State (Rada Stanu) supervised the Administrative Council's activities, was composed of Council members plus advisors, and prepared draft laws inspired by the monarch and reported on government activities.
+
+[EXERCISES]: Identifying governmental bodies and their functions.
+[VOCAB]:
+
+Rada Administracyjna – Administrative Council
+ministerstwo – ministry
+wyznania religijne – religious denominations
+oświecenie publiczne – public enlightenment
+sprawy wewnętrzne i policyjne – internal and police affairs
+przychody i skarb – revenue and treasury
+Rada Stanu – Council of State
+
+
+[CULTURE]: The structure resembled modern parliamentary governments but with much stronger monarchical control. The term "oświecenie publiczne" (public enlightenment) was commonly used for education ministries in this era.
+
+
+[SUBTOPIC] Legislative Power: The Bicameral Sejm
+Explanation: Congress Poland had a bicameral parliament consisting of the Chamber of Deputies (Izba Poselska) and the Senate. The Chamber of Deputies had 128 members: 77 noble deputies elected at regional assemblies (sejmiki) and 51 representatives elected by communal associations, representing wealthy townspeople, clergy, and academics. Voting rights extended beyond nobility to include rich burghers, wealthy peasants, secular and religious clergy, and representatives of industry—making it relatively progressive for its time. The Senate (upper house) consisted of no more than half the number of Chamber deputies (maximum 64 members): 9 bishops, 18 voivodes (regional governors), and 37 castellans. According to the constitution, the Sejm should have been convened every two years for 30 days. Its responsibilities included: passing resolutions on matters presented by the King, approving the budget, and controlling the government (ministers could be held accountable for violating the constitution).
+
+[EXERCISES]: Understanding parliamentary structure; comparing to modern legislatures.
+[VOCAB]:
+
+władza ustawodawcza – legislative power
+dwuizbowy sejm – bicameral parliament
+Izba Poselska – Chamber of Deputies
+Senat – Senate
+poseł – deputy
+sejmik – regional assembly
+deputowany – representative
+prawa wyborcze – voting rights
+szlachta/ziemiaństwo – nobility/landed gentry
+mieszczaństwo – townspeople/burghers
+duchowieństwo – clergy
+budżet – budget
+uchwalać – to pass (a law)
+
+
+[CULTURE]: The term "ziemiaństwo" (landed gentry) became the 19th-century term for nobility, reflecting their role as landowners. The relatively broad voting rights were progressive compared to other European countries at this time, though still limited compared to modern democracy.
+
+
+[SUBTOPIC] Judicial Power and Civil Rights
+Explanation: Congress Poland had independent courts with guaranteed freedom of judgment. The constitution protected civil and political rights including freedom of press, freedom of religion, equality before law, and personal inviolability. However, the teacher emphasized repeatedly that these rights would be gradually eliminated following the uprisings—the November Uprising would lead to some restrictions, and the January Uprising would result in the complete loss of autonomy, including the abolition of Polish schools, the army, and the use of Polish language in official contexts.
+
+[EXERCISES]: Recording constitutional rights and their eventual loss.
+[VOCAB]:
+
+władza sądownicza – judicial power
+niezależne sądy – independent courts
+wolność orzekania – freedom of judgment
+prawa obywatelskie – civil rights
+prawa polityczne – political rights
+powstanie listopadowe – November Uprising
+powstanie styczniowe – January Uprising
+
+
+[CULTURE]: The teacher used these provisions to foreshadow future events, creating narrative tension. The loss of these rights after failed uprisings would become a major theme in Polish 19th-century history and literature.
+
+
+[SUBTOPIC] Economic Development (1815-1830)
+Explanation: The period 1815-1830 was economically prosperous for Congress Poland. Franciszek Ksawery Drucki-Lubecki served as Minister of Treasury and implemented important economic initiatives. He established the Bank of Poland and the Land Credit Society (Towarzystwo Kredytowe Ziemskie), which provided low-interest loans to the landed gentry for modernizing their estates. He encouraged cultivation of previously unknown crops like potatoes and clover. Customs duties with Russia were abolished, allowing Polish entrepreneurs to sell more goods. Industry developed, including factories and foundries. Urbanization accelerated, with Łódź experiencing the most spectacular growth, transforming from a small village into a major industrial city famous for its textile industry within several decades. Universities were renewed in Vilnius and newly established in Warsaw.
+
+[EXERCISES]: Identifying key economic terms and developments; studying from textbook pages 78.
+[VOCAB]:
+
+Franciszek Ksawery Drucki-Lubecki – Finance Minister
+Bank Polski – Bank of Poland
+Towarzystwo Kredytowe Ziemskie – Land Credit Society
+kredyt nisko oprocentowany – low-interest loan/credit
+cło – customs duty
+industrializacja – industrialization
+urbanizacja – urbanization
+przemysł włókienniczy – textile industry
+huta – foundry/smelter
+fabryka – factory
+robotnik – worker
+przemysłowiec – industrialist
+kapitalista – capitalist
+
+
+[CULTURE]: The teacher recommended the film "Ziemia Obiecana" (The Promised Land) about Łódź's industrial development, which shows both the economic growth and the poor conditions of workers. The Łódź industrial district became one of the most important manufacturing centers in the Russian Empire, but workers faced harsh conditions similar to early Industrial Revolution Britain.
+
+
+[SUBTOPIC] Political Divisions Among Poles
+Explanation: The teacher explained that Polish society was divided on whether to accept the limited autonomy of Congress Poland or continue fighting for complete independence. Some Poles were satisfied with the autonomy and economic prosperity, believing cooperation with Russia was the best path forward. Others, including Tadeusz Kościuszko, felt betrayed and wanted full sovereignty. The teacher emphasized that this division would contribute to the failure of future uprisings—successful collective action requires unity, and the Poles lacked consensus. Those with property and status had more to lose from revolution, while those without property had less to lose and potentially much to gain. The teacher noted that conservative aristocrats like Czartoryski, who opposed revolutions and uprisings, were natural allies of the Tsar, which is why he trusted Polish nobles in administrative positions.
+
+[EXERCISES]: Discussion of political divisions and their consequences.
+[VOCAB]:
+
+jednomyślność – unanimity
+podzieleni – divided
+suwerenność – sovereignty
+niezależność – independence
+konserwatyzm – conservatism
+rewolucja – revolution
+konspiracja – conspiracy
+
+
+[CULTURE]: This internal division is a recurring theme in Polish history. The teacher drew parallels to modern group decision-making, explaining that unity is necessary for successful collective action. The phrase "co mają do stracenia" (what they have to lose) echoes Marx's famous statement about workers having "nothing to lose but their chains."
+
+
+[SUBTOPIC] Comparison of Autonomy Across Partitions
+Explanation: The teacher briefly compared autonomy levels across the three partitions. Congress Poland under Russia had the most extensive autonomy with its constitution, parliament, and army. The Republic of Kraków under Austrian supervision had limited autonomy. The Grand Duchy of Poznań under Prussia had very limited autonomy that existed only briefly. Poles in Galicia (Austrian partition) would have to wait over 50 years for any meaningful autonomy. Prussia introduced only partial, very restricted autonomy in the Grand Duchy of Poznań. Tsar Alexander also introduced some national freedoms for Poles in the "taken lands" (ziemie zabrane), though these were more limited than in Congress Poland.
+
+[EXERCISES]: Comparing autonomy across different partitioned territories.
+[VOCAB]:
+
+zabór rosyjski – Russian partition
+zabór austriacki – Austrian partition
+zabór pruski – Prussian partition
+przywilej – privilege
+
+
+[CULTURE]: Understanding these differences is crucial for comprehending why uprisings occurred primarily in Congress Poland and Galicia, and why different strategies emerged in different partitions.
+
+
+[SUBTOPIC] Video Resources and Lesson Conclusion
+Explanation: The teacher showed portions of a detailed video about Congress Poland from the "Bażanin" YouTube channel, specifically from the "Lekcje Historii" (History Lessons) playlist. The channel focuses primarily on Polish history with videos typically lasting 30 minutes or longer. The teacher fast-forwarded through material already covered (like Napoleon) to focus on the constitutional structure and political system of Congress Poland. She encouraged students to watch the full video at home if interested. The lesson emphasized understanding the constitutional monarchy structure, the three branches of government (executive, legislative, judicial), and how Congress Poland's constitutional system was unique compared to absolutist Russia.
+
+[EXERCISES]: Watching and taking notes from educational video; optional homework to finish watching.
+[VOCAB]:
+
+trójpodział władzy – separation of powers (three branches)
+monarchia konstytucyjna – constitutional monarchy
+monarchia absolutna – absolute monarchy
+unia – union
+
+
+[CULTURE]: The teacher's use of multimedia resources reflects modern teaching methods. The Bażanin channel is a popular Polish history resource. The paradox of Poland having a constitutional monarchy while being part of absolutist Russia highlighted the unusual nature of this arrangement.
+
+
+[KEY POINTS]
+
+Congress Poland (1815-1830) had significant autonomy: own constitution, parliament (Sejm), army, budget, monetary system, education system, and Polish language in administration—unique compared to absolutist Russia.
+Power structure involved multiple control mechanisms: Tsar as hereditary King of Poland; Polish viceroy (Józef Zajączek) with limited real power; Grand Duke Konstantin Romanov controlling the military; and strong monarchical powers including veto, decree issuance, and ability to bypass parliament.
+The constitution was progressive but octroyed (granted): included separation of powers, bicameral parliament with relatively broad voting rights, independent judiciary, and civil liberties—making it one of Europe's most liberal constitutions, though ultimately controlled by the Tsar.
+Economic prosperity occurred 1815-1830: Minister Drucki-Lubecki established Bank of Poland and Land Credit Society; abolished customs with Russia; encouraged industrialization and urbanization, especially in Łódź; renewed universities in Vilnius and Warsaw.
+Polish society was politically divided: between those accepting limited autonomy and cooperation with Russia (conservatives like Czartoryski) versus those demanding full independence; this division would contribute to the failure of future uprisings, which would result in the progressive elimination of all autonomy and rights.
+
+
+[SUMMARY]
+This history lesson covered the establishment and structure of Congress Poland (Królestwo Polskie/Kongresowe) following the Congress of Vienna in 1815. After reviewing the territorial divisions among the three partitioning powers (Russia, Prussia, Austria), the teacher focused extensively on Congress Poland's constitutional system, which was uniquely liberal for its time despite being under Russian control. Students learned about the complex power structure involving the Russian Tsar as King of Poland, Polish viceroy Józef Zajączek, and Russian Grand Duke Konstantin Romanov as military commander. The lesson detailed the three branches of government: executive (Administrative Council with five ministries), legislative (bicameral Sejm with Chamber of Deputies and Senate), and judicial (independent courts). Economic development under Finance Minister Drucki-Lubecki was also discussed, including banking institutions, industrialization, and urbanization, particularly Łódź's transformation into a textile manufacturing center. Throughout the lesson, the teacher repeatedly foreshadowed that these rights and institutions would be progressively eliminated following the November and January Uprisings, and emphasized how political divisions among Poles between cooperation and armed resistance would hamper future independence efforts. The lesson combined lecture, textbook analysis, map study, and video resources to help students understand this complex period of Polish history under foreign rule.
+
+`;
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+function renderTranscript(raw) {
+    const content = document.getElementById('content');
+    content.innerHTML = ''; // clear previous
+
+    const lines = raw.split('\n');
+    let currentList = null;
+
+    lines.forEach(line => {
+        line = line.trim();
+        if (!line) return;
+
+        let div;
+        if (line.startsWith('[DATE]')) {
+            div = document.createElement('div');
+            div.className = 'date';
+            div.textContent = 'Date: ' + line.replace('[DATE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[TEACHER]')) {
+            div = document.createElement('div');
+            div.className = 'teacher';
+            div.textContent = 'Teacher: ' + line.replace('[TEACHER]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[LESSON TOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'topic';
+            div.textContent = line.replace('[LESSON TOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[OBJECTIVE]')) {
+            div = document.createElement('div');
+            div.className = 'objective';
+            div.textContent = 'Objective: ' + line.replace('[OBJECTIVE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUBTOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'subtopic';
+            div.textContent = line.replace('[SUBTOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[EXERCISES]')) {
+            div = document.createElement('div');
+            div.className = 'exercises';
+            div.textContent = 'Exercises: ' + line.replace('[EXERCISES]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[VOCAB]')) {
+            div = document.createElement('div');
+            div.className = 'vocab';
+            div.textContent = 'Vocabulary: ' + line.replace('[VOCAB]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[CULTURE]')) {
+            div = document.createElement('div');
+            div.className = 'culture';
+            div.textContent = 'Culture: ' + line.replace('[CULTURE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[KEY POINTS]')) {
+            div = document.createElement('div');
+            div.className = 'key-points';
+            div.textContent = line.replace('[KEY POINTS]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUMMARY]')) {
+            div = document.createElement('div');
+            div.className = 'summary';
+            div.textContent = line.replace('[SUMMARY]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('- ')) { // bullet point
+            if (!currentList) {
+                currentList = document.createElement('ul');
+                content.appendChild(currentList);
+            }
+            const li = document.createElement('li');
+            li.textContent = line.substring(2).trim();
+            currentList.appendChild(li);
+            return;
+        } else { // normal paragraph
+            div = document.createElement('p');
+            div.textContent = line;
+            currentList = null;
+        }
+
+        content.appendChild(div);
+    });
+}
+
+// Automatically render transcript on page load
+renderTranscript(rawTranscript);
+</script>
+
+</body>
+</html>

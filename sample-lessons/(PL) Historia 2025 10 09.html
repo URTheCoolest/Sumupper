@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript Summary</title>
+<style>
+    body {
+        font-family: 'Inter', 'Roboto', Arial, sans-serif;
+        background-color: #fafafa;
+        color: #222;
+        line-height: 1.6;
+        padding: 20px;
+        margin: 0;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .date { font-size: 1em; color: #666; margin-top: 1em; }
+    .teacher { font-weight: bold; font-size: 1.3em; margin-top: 2em; color: #0055aa; }
+    .topic { font-style: italic; font-size: 1.2em; margin-top: 1.5em; color: #aa5500; }
+    .objective { font-size: 1.1em; margin-top: 1em; color: #5500aa; font-weight: 600; }
+    .subtopic { font-weight: bold; font-size: 1.1em; margin-top: 1em; color: #008800; }
+    .exercises { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa0055; }
+    .vocab { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #0088aa; }
+    .culture { font-weight: bold; font-size: 1em; margin-top: 0.8em; color: #aa8800; }
+    .key-points { font-weight: bold; font-size: 1.15em; margin-top: 1.5em; color: #550088; }
+    .summary { font-size: 1.1em; margin-top: 1.5em; padding: 15px; background-color: #f0f0f0; border-left: 4px solid #0055aa; }
+    
+    p { margin-bottom: 1em; margin-left: 0; }
+
+    /* Subtopic paragraphs indented */
+    .subtopic + p { margin-left: 20px; }
+
+    ul { margin-left: 20px; margin-bottom: 1em; }
+
+    /* Dark mode */
+    body.dark-mode { background-color: #1e1e1e; color: #f5f5f5; }
+    .dark-mode .date { color: #999; }
+    .dark-mode .teacher { color: #66aaff; }
+    .dark-mode .topic { color: #ffaa66; }
+    .dark-mode .objective { color: #aa88ff; }
+    .dark-mode .subtopic { color: #77dd77; }
+    .dark-mode .exercises { color: #ff66aa; }
+    .dark-mode .vocab { color: #66ddff; }
+    .dark-mode .culture { color: #ffdd66; }
+    .dark-mode .key-points { color: #bb88ff; }
+    .dark-mode .summary { background-color: #2a2a2a; border-left-color: #66aaff; }
+
+    /* Toggle button */
+    .dark-toggle {
+        position: fixed; top: 20px; right: 20px;
+        background-color: #222; color: #fafafa;
+        border: none; padding: 10px 15px;
+        cursor: pointer; border-radius: 5px;
+        font-size: 14px; transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode .dark-toggle { background-color: #f5f5f5; color: #222; }
+</style>
+</head>
+<body>
+<button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<div class="container"> 
+    <h1>Szczegółowe podsumowanie lekcji historii</h1>
+    <div id="content"></div>
+</div>
+
+<script>
+const rawTranscript = `
+
+[DATE] 2025-10-09
+[TEACHER] Nie podano (nauczycielka historii)
+[LESSON TOPIC] Królestwo Polskie (Kongresowe) po Kongresie Wiedeńskim 1815 – ustrój, konstytucja i autonomia
+[OBJECTIVE] Zrozumienie ustroju Królestwa Polskiego (Kongresowego), poznanie konstytucji z 1815 roku, trójpodziału władzy oraz zakresu autonomii polskich ziem po Kongresie Wiedeńskim.
+
+[SUBTOPIC] Wprowadzenie – sprawdzian i organizacja lekcji
+Explanation: Lekcja rozpoczęła się od sprawdzianu z materiału wcześniejszego. Nauczycielka zbierała telefony na czas sprawdzianu i informowała uczniów o zmniejszeniu zakresu materiału w tym roku szkolnym. Uczniowie otrzymali także informację o możliwości poprawy sprawdzianu (do dwóch tygodni po rozdaniu). Po sprawdzianie klasa przeszła do kontynuacji tematu siódmego: Ziemie Polskie po Kongresie Wiedeńskim.
+[EXERCISES]:
+
+Sprawdzian pisemny z wcześniejszego materiału
+Praca z wklejką zeszytową dotyczącą Królestwa Polskiego
+Analiza mapy podziału ziem polskich po Kongresie Wiedeńskim
+
+[VOCAB]:
+
+Kongres Wiedeński – kongres pokojowy w 1814-1815 roku, który zadecydował o nowym podziale Europy po upadku Napoleona
+Autonomia – częściowa niezależność, pewne swobody w zarządzaniu wewnętrznym przy zależności od większego państwa
+Poprawka – możliwość poprawienia oceny ze sprawdzianu w ciągu dwóch tygodni
+
+[CULTURE]:
+Nauczycielka podkreśliła, że materiał został "uszczuplony" (zmniejszony) w tym roku dla uczniów, co jest korzystne. System oceniania: połowa punktów potrzebna na ocenę dostateczną (trójkę).
+
+[SUBTOPIC] Kontekst historyczny – od rozbiorów do Kongresu Wiedeńskiego
+Explanation: W 1795 roku Polska zniknęła z mapy Europy. Uczestnicy powstania kościuszkowskiego uciekli do Francji, gdzie utworzyli Legiony Polskie we Włoszech (1797). Napoleon Bonaparte, obejmując władzę we Francji, pokonał Prusy i Austrię, co doprowadziło do powstania Księstwa Warszawskiego. Po klęsce Napoleona w 1814 roku Kongres Wiedeński zadecydował o losach Polski i podziale jej ziem między zaborców.
+[EXERCISES]:
+
+Analiza mapy podziału ziem polskich
+Praca z podręcznikiem (strony 76-78)
+
+[VOCAB]:
+
+Legiony Polskie – wojskowe oddziały polskie walczące u boku Francji (1797)
+Księstwo Warszawskie – państwo polskie powstałe w 1807 roku z woli Napoleona
+Ziemie zabrane – terytoria I Rzeczypospolitej wcielone do Rosji już od pierwszych rozbiorów
+Rzeczpospolita Krakowska – wolne miasto Kraków z okolicą, pod zarządem trzech państw zaborczych
+
+[CULTURE]:
+Kongres Wiedeński zwołany został przez zwycięskie mocarstwa w Wiedniu (stolicy Austrii). Najwięcej uwagi poświęcono sprawie polskiej. Adam Jerzy Czartoryski starał się ratować sprawę polską – był przyjacielem cara Aleksandra I Romanowa.
+
+[SUBTOPIC] Podział ziem polskich po Kongresie Wiedeńskim
+Explanation: Kongres Wiedeński postanowił, że większość ziem Księstwa Warszawskiego przypadnie Rosji. Prusy odzyskały tylko zachodnią Wielkopolskę i ziemię chełmińską (nazwane Wielkim Księstwem Poznańskim). Kraków z okolicą ustanowiono Rzeczpospolitą Krakowską. W 1815 roku Rosja utworzyła na uzyskanych ziemiach Królestwo Polskie, zwane też Kongresowym lub Kongresówką. Galicja pozostała pod panowaniem austriackim – był to obszar bardziej ukraiński niż polski (wyjątek: Lwów – prawie w całości zamieszkany przez Polaków).
+[EXERCISES]:
+
+Analiza mapy – lokalizacja Galicji, Królestwa Polskiego, Wielkiego Księstwa Poznańskiego, Rzeczypospolitej Krakowskiej
+Identyfikacja miast: Lwów, Tarnów, Przemyśl, Nowy Sącz, Kraków, Warszawa
+
+[VOCAB]:
+
+Galicja – obszar pod zaborem austriackim, dziś w większości na Ukrainie
+Królestwo Polskie / Królestwo Kongresowe / Kongresówka – państwo utworzone przez cara Aleksandra I z części ziem polskich
+Wielkie Księstwo Poznańskie – zachodnia Wielkopolska i ziemia chełmińska pod zaborem pruskim
+Zabór – podział i przymusowe wcielenie ziem polskich do państw zaborczych (Rosja, Prusy, Austria)
+
+[CULTURE]:
+Nauczycielka przypomniała, że ziemie zabrane to około połowy (lub więcej) terytorium I Rzeczypospolitej, które od dawna były już wcielone do Rosji. Lwów dziś jest miastem na Ukrainie z dużą mniejszością polską.
+
+[SUBTOPIC] Konstytucja Królestwa Polskiego i autonomia
+Explanation: Car Aleksander I utworzył autonomiczne Królestwo Polskie. Autonomiczne oznacza, że choć było zależne od cara, cieszyło się pewną niezależnością i większymi swobodami niż inne ziemie rosyjskie. Królestwo miało własną konstytucję (autorem był Adam Jerzy Czartoryski, choć nadał ją Aleksander I). Konstytucja gwarantowała wolność prasy i wyznania, równość wobec prawa, nietykalność osobistą, polskie szkoły, język polski w urzędach, osobną armię (podległą Rosji). Była to najbardziej liberalna konstytucja w Europie w tamtym czasie, ale jednocześnie "okrojowana" – nadana przez cara.
+[EXERCISES]:
+
+Notowanie elementów autonomii
+Analiza ustroju Królestwa Polskiego (podręcznik str. 76-77)
+
+[VOCAB]:
+
+Konstytucja – dokument określający zakres praw mieszkańców i ustrój państwa
+Monarchia konstytucyjna – forma rządów, gdzie władza monarchy ograniczona jest konstytucją (w Królestwie Polskim); w Rosji była monarchia absolutna
+Liberalna konstytucja – konstytucja zapewniająca szerokie prawa i wolności obywatelskie
+Okrojowana konstytucja – konstytucja nadana przez władcę, ograniczająca faktyczną niezależność
+
+[CULTURE]:
+W Rosji nie było konstytucji ani takich swobód jak w Królestwie Polskim – to był "fenomen" na skalę imperium rosyjskiego. Nauczycielka zaznaczyła, że car chciałby policzkirować te wszystkie przywileje, ale był zmuszony je nadać.
+
+[SUBTOPIC] Władza wykonawcza w Królestwie Polskim
+Explanation: Królem Polski został car rosyjski Aleksander I Romanow, który nie rezydował w Warszawie, lecz w Petersburgu. W Królestwie zastępował go namiestnik – Józef Zajączek (Polski generał okresu napoleońskiego, charakteryzowany jako "zajączek" – płochliwy, pokorny, bez własnego zdania). W Warszawie rezydował także wielki książę Konstanty Romanow, brat Aleksandra, który został naczelnym dowódcą Wojska Polskiego. Konstanty był postacią kontrowersyjną – uwielbił Polskę i miał żonę Polkę, ale żołnierze go nienawidzili z powodu psychopatycznego charakteru i żelaznej dyscypliny.
+[EXERCISES]:
+
+Zapamiętanie nazwisk: Józef Zajączek (namiestnik), Konstanty Romanow (dowódca wojsk)
+Notowanie charakterystyk obu postaci
+
+[VOCAB]:
+
+Namiestnik – zarządca w imieniu cara
+Zajączek – zwierzę płochliwe, symbol pokornego charakteru pierwszego namiestnika
+Konstanty Romanow – brat cara, naczelny dowódca Wojska Polskiego, postać negatywna w literaturze romantycznej (np. Mickiewicz)
+Józef Zajączek – generał napoleoński, pierwszy namiestnik Królestwa Polskiego
+
+[CULTURE]:
+Nauczycielka użyła mnemotechniki: "Zajączek" – jak zwierzę, które ucieka, płochliwe – tak samo charakteryzował się generał Zajączek. Konstanty Romanow był "czarną personą" w Polsce, odpowiedzialny za surowe kary i upokorzenia żołnierzy, co prowadziło do samobójstw.
+
+[SUBTOPIC] Ustrój Królestwa Polskiego – trójpodział władzy
+Explanation: Królestwo Polskie miało trójpodział władzy: wykonawczą, ustawodawczą i sądowniczą. Władza wykonawcza: Car (król Polski) kierował administracją, był naczelnym wodzem sił zbrojnych, miał prawo inicjatywy prawodawczej, mógł wetować uchwały Sejmu, zwoływał i rozwiązywał Sejm, mianował najważniejszych urzędników, mógł wydawać dekrety (omijając Sejm), miał prawo zmiany konstytucji. Radą Administracyjną (rządem) kierował namiestnik, w jej skład wchodziło pięć ministerstw. Rada Stanów kontrolowała działalność administracji rządowej i opracowywała projekty ustaw.
+[EXERCISES]:
+
+Notowanie uprawnień cara jako króla Polski
+Analiza schematu ustroju (podręcznik str. 76-77)
+Zapisywanie składu Rady Administracyjnej (5 ministerstw)
+
+[VOCAB]:
+
+Władza wykonawcza – władza sprawująca rządy i wykonująca prawa
+Rada Administracyjna – rząd Królestwa Polskiego (5 ministerstw)
+Rada Stanów – organ kontrolny i doradczy
+Prawo weta – możliwość odrzucenia uchwały Sejmu przez cara
+Inicjatywa prawodawcza – prawo do przedstawienia projektu ustawy
+Dekret – zarządzenie wydane przez władcę, omijające parlament
+Pięć ministerstw: Wyznań religijnych i oświetlenia publicznego, Sprawiedliwości, Spraw wewnętrznych i politycznych, Przychodów i skarbu, Wojny
+
+[CULTURE]:
+Car nie musiał mianować rosyjskich urzędników – w polskiej arystokracji miał wielu lojalnych, oddanych urzędników (konserwatystów), którzy nie poszliby w rewolucje czy powstania. To wyjaśnia, dlaczego car mógł zaufać polskim urzędnikom.
+
+[SUBTOPIC] Władza ustawodawcza – Sejm dwuizbowy
+Explanation: Władzę ustawodawczą stanowił dwuizbowy Sejm. Izba Poselska składała się ze 128 ludzi: 77 posłów szlachty wybieranych na sejmikach + 51 deputowanych wybieranych ze zgromadzeń gminnych. Prawa wyborcze uzyskali nie tylko szlachta, ale także bogaci mieszczanie, chłopi, przedstawiciele duchowieństwa i inteligencji. Senat (izba wyższa) nie mógł przekroczyć połowy liczby Izby Poselskiej (maksymalnie 60 osób): 9 biskupów, 18 wojewodów, 33 kasztelanów (poprawka: w transkrypcie było "37", ale suma to 60). Sejm miał być zwoływany co dwa lata na 30 dni.
+[EXERCISES]:
+
+Notowanie składu Sejmu: Izba Poselska (128) i Senat (60)
+Zapamiętanie: Sejm co 2 lata na 30 dni
+Zapisanie kompetencji Sejmu
+
+[VOCAB]:
+
+Władza ustawodawcza – władza stanowiąca prawa (ustawy)
+Izba Poselska – niższa izba parlamentu
+Senat – wyższa izba parlamentu
+Sejmiki – lokalne zgromadzenia szlachty wybierające posłów
+Kompetencje Sejmu: podejmowanie uchwał o sprawach przedstawionych przez króla, zatwierdzanie budżetu, kontrolowanie rządu, możliwość oskarżenia ministra o złamanie konstytucji
+
+[CULTURE]:
+W Królestwie Polskim był trójpodział władzy i monarchia konstytucyjna, czego nie było w Rosji (tam monarchia absolutna). To był fenomen – Unia z Rosją, gdzie Polska miała konstytucję, a Rosja nie. Sejm powinien być zwoływany co 2 lata, ale car Aleksander nie zawsze się do tego stosował.
+
+[SUBTOPIC] Władza sądownicza i prawa obywatelskie
+Explanation: Królestwo Polskie miało niezależne sądy i zagwarantowaną wolność orzekania. Konstytucja gwarantowała prawa obywatelskie i polityczne: wolność druku, prasy, słowa, wyznania, równość wobec prawa, nietykalność osobistą, język polski w urzędach i szkołach.
+[EXERCISES]:
+
+Notowanie praw obywatelskich
+Porównanie z sytuacją w Rosji (brak tych wolności)
+
+[VOCAB]:
+
+Władza sądownicza – władza wymierzająca sprawiedliwość
+Niezależne sądy – sądy niepodlegające wpływom władzy wykonawczej
+Wolność druku i prasy – prawo do publikowania bez цензury
+Równość wobec prawa – wszyscy obywatele równi przed prawem
+Nietykalność osobista – ochrona przed arbitralnym aresztowaniem
+
+[CULTURE]:
+Te prawa nie obowiązywały w Rosji. Polacy mieszkający poza Królestwem Polskim (np. w Wilnie, Białymstoku – na ziemiach zabranych) nie mieli autonomii: musieli chodzić do rosyjskich szkół, załatwiać sprawy po rosyjsku, służyć w rosyjskiej armii.
+
+[SUBTOPIC] Rozwój gospodarczy Królestwa Polskiego (1815-1830)
+Explanation: Lata 1815-1830 były bardzo korzystne dla Królestwa Polskiego. Rozwijała się gospodarka, Polacy bogacili się, a autonomia stwarzała pomyślne warunki do rozwoju kultury i oświaty. Franciszek Ksawery Drucki-Lubecki (minister skarbu) był przedsiębiorczym i pracowitym człowiekiem – utworzył Bank Polski oraz Towarzystwo Kredytowe Ziemskie (instytucję udzielającą nisko oprocentowanych kredytów szlachcie/ziemiaństwu na unowocześnienie gospodarstw). Drucki-Lubecki namawił do uprawy ziemniaków i koniczyny, zniósł cła z Rosją. Rozwijał się przemysł (huty, fabryki), nastąpiła urbanizacja miast (najbardziej spektakularny wzrost Łodzi – z małej wioski w wielkie miasto przemysłowe). Odnowiono uniwersytet w Wilnie, utworzono nowy w Warszawie.
+[EXERCISES]:
+
+Zapamiętanie postaci: Franciszek Ksawery Drucki-Lubecki
+Notowanie najważniejszych inwestycji: Bank Polski, Towarzystwo Kredytowe Ziemskie, Giełda Kupiecka
+Przykład industrializacji: Łódź (przemysł włókienniczy)
+
+[VOCAB]:
+
+Franciszek Ksawery Drucki-Lubecki – minister skarbu, twórca Banku Polskiego
+Bank Polski – instytucja finansowa utworzona przez Druckiego-Lubeckiego
+Towarzystwo Kredytowe Ziemskie – instytucja udzielająca kredytów ziemiaństwu
+Ziemianin/ziemiaństwo – określenie szlachty w XIX wieku
+Industrializacja – rozwój przemysłu
+Urbanizacja – rozwój miast
+Łódzki okręg przemysłowy – region rozwoju przemysłu włókienniczego
+Cło – opłata graniczna
+
+[CULTURE]:
+Łódź jest przykładem szybkiej urbanizacji – z wioski przekształciła się w wielkie miasto robotnicze. Nauczycielka poleciła "Ziemię Obiecaną" jako lekturę/film obrazujący tę epokę. Sytuacja robotników była trudna (jak w Wielkiej Brytanii na początku rewolucji przemysłowej). Uniwersytety w Warszawie i Wilnie będą zlikwidowane po upadku powstania.
+
+[SUBTOPIC] Zapowiedź przyszłych wydarzeń – powstania i utrata autonomii
+Explanation: Nauczycielka wielokrotnie podkreślała, że wszystkie elementy autonomii (konstytucja, wolność słowa, religia, język, armia, uniwersytety) zostaną zabrane w wyniku powstań narodowych. Po powstaniu listopadowym (1830-1831) car zacznie stopniowo zabierać przywileje. Po powstaniu styczniowym (1863-1864) nastąpi całkowita rusyfikacja i likwidacja autonomii. W powstaniu listopadowym Polacy jeszcze mają regularną armię, generałów, sztab generalny. Po jego upadku armia zostanie zlikwidowana, więc kolejne powstania będą organizowane "na zasadzie pospolite ruszenie" – bez regularnego wojska.
+[EXERCISES]:
+
+Zapamiętanie konsekwencji powstań (utrata autonomii, rusyfikacja)
+Zrozumienie różnicy między powstaniem listopadowym (z armią) a styczniowym (bez armii)
+
+[VOCAB]:
+
+Powstanie listopadowe (1830-1831) – pierwsze duże powstanie narodowe przeciw Rosji
+Powstanie styczniowe (1863-1864) – drugie duże powstanie narodowe
+Rusyfikacja – narzucanie języka i kultury rosyjskiej
+Germanizacja – narzucanie języka i kultury niemieckiej (w zaborze pruskim)
+Pospolite ruszenie – powszechne wezwanie do walki bez regularnej armii
+Represje – kary, prześladowania po upadku powstania
+
+[CULTURE]:
+Nauczycielka zaznaczyła, że Polska jest pod zaborami przez 123 lata. Uczniowie uczą się o okresie największego prosperity (dobrobytu) w zaborze rosyjskim, ale to wciąż zabór. Podkreśliła także podział wśród Polaków: czy walczyć o pełną niepodległość (i ryzykować utratę tego, co mają), czy cieszyć się autonomią i nie buntować się. Brak jednomyślności był jedną z przyczyn upadku powstań.
+
+[SUBTOPIC] Podziały wśród Polaków – lojalizm vs powstańczy zapał
+Explanation: Nauczycielka poruszyła kwestię podziałów wśród Polaków w okresie Królestwa Polskiego. Część Polaków (szczególnie arystokracja, konserwatyści jak Adam Jerzy Czartoryski) była lojalna wobec cara i wierzyła, że pod jego rządami uda się stopniowo odbudować Polskę. Inni byli rozczarowani (jak Tadeusz Kościuszko, który wyjechał do Szwajcarii i nigdy nie wrócił do polityki). Pytanie brzmiało: czy iść dalej i walczyć o pełną niepodległość (mając wątpliwe narzędzia i możliwości), czy cieszyć się autonomią? Brak jednomyślności osłabiał polskie dążenia niepodległościowe.
+[EXERCISES]:
+
+Zrozumienie pojęcia lojalizm
+Analiza konsekwencji braku jednomyślności
+
+[VOCAB]:
+
+Lojalizm – postawa lojalności wobec zaborcy, wiara w stopniową odbudowę Polski bez walki zbrojnej
+Konserwatyzm – ideologia opowiadająca się za tradycją, stabilnością, przeciwna rewolucjom
+Arystokracja – warstwa społeczna najwyższa (np. książęta jak Czartoryscy)
+"Mają co stracić" – osoby zamożne, które boją się utraty majątku w powstaniu
+"Nie mają co stracić" – ludzie biedni, którzy mogą tylko zyskać (robotnicy, chłopi)
+
+[CULTURE]:
+Nauczycielka porównała sytuację do decyzji klasowych – im bardziej uczniowie są jednomyślni, tym łatwiej osiągnąć wspólny cel. Podobnie było w przypadku Polaków – brak jedności osłabiał skuteczność powstań. Klasa robotnicza nie miała co stracić (poza życiem), więc była bardziej skłonna do walki.
+
+[SUBTOPIC] Materiały dodatkowe – kanał "Bażanin" i film o Królestwie Polskim
+Explanation: Nauczycielka poleciła film z kanału YouTube "Bażanin" (playlista "Lekcje Historii") pt. "Utworzenie Królestwa Polskiego 1815". Film jest półgodzinny i szczegółowo omawia sprawę polską podczas Kongresu Wiedeńskiego, konstytucję Królestwa Polskiego i system polityczny. Nauczycielka pokazała fragmenty filmu na lekcji, przycinając części o Napoleonie (powtórka). Film zawiera szczegółową analizę ustroju i uprawnień cara.
+[EXERCISES]:
+
+Obejrzenie filmu w domu (opcjonalnie)
+Kontynuacja nauki z kanału "Bażanin" (historia Polski)
+
+[VOCAB]:
+
+Bażanin – kanał YouTube z lekcjami historii Polski
+Playlist "Lekcje Historii" – seria filmów edukacyjnych
+
+[CULTURE]:
+Kanał "Bażanin" skupia się na historii Polski, filmy są półgodzinne lub dłuższe. Nauczycielka poleca go jako dodatkowy materiał dla zainteresowanych uczniów.
+
+[KEY POINTS]
+
+Kongres Wiedeński (1814-1815) podzielił ziemie polskie: większość Księstwa Warszawskiego przypadła Rosji, Prusy odzyskały Wielkopolskę i ziemię chełmińską, Kraków stał się Rzeczpospolitą Krakowską.
+Królestwo Polskie (Kongresowe) utworzone w 1815 roku przez cara Aleksandra I miało autonomię: własną konstytucję (najbardziej liberalną w Europie), sejm, armię, język polski, uniwersytety, wolność druku i wyznania.
+Ustrój Królestwa Polskiego: trójpodział władzy – wykonawcza (car, namiestnik Józef Zajączek, Rada Administracyjna), ustawodawcza (dwuizbowy sejm: Izba Poselska + Senat), sądownicza (niezależne sądy).
+Rozwój gospodarczy (1815-1830): minister Franciszek Ksawery Drucki-Lubecki utworzył Bank Polski i Towarzystwo Kredytowe Ziemskie, zniesiono cła z Rosją, rozwijała się industrializacja (Łódź – przemysł włókienniczy) i urbanizacja.
+Konsekwencje powstań: po powstaniu listopadowym (1830-1831) i styczniowym (1863-1864) car zabierze konstytucję, wolność słowa, język polski, armię, uniwersytety – nastąpi rusyfikacja i utrata autonomii.
+
+
+[SUMMARY]
+Lekcja poświęcona była ustroju i autonomii Królestwa Polskiego (Kongresowego) po Kongresie Wiedeńskim w 1815 roku. Nauczycielka omówiła podział ziem polskich między zaborców (Rosja, Prusy, Austria), utworzenie Królestwa Polskiego przez cara Aleksandra I oraz nadanie konstytucji – najbardziej liberalnej w Europie, gwarantującej trójpodział władzy, sejm, armię, język polski, wolność druku i wyznania. Szczegółowo przeanalizowano ustrój: władzę wykonawczą (car, namiestnik Józef Zajączek, Rada Administracyjna), ustawodawczą (dwuizbowy sejm) i sądowniczą (niezależne sądy). Omówiono także rozwój gospodarczy w latach 1815-1830 dzięki inicjatywom ministra Franciszka Ksawerego Druckiego-Lubeckiego (Bank Polski, Towarzystwo Kredytowe Ziemskie, industrializacja Łodzi). Nauczycielka wielokrotnie podkreślała, że wszystkie elementy autonomii zostaną zabrane w wyniku powstań narodowych (listopadowego i styczniowego), co doprowadzi do rusyfikacji i utraty przywilejów. Uczniowie pracowali z podręcznikiem, mapą i materiałem filmowym z kanału "Bażanin".
+
+`;
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+function renderTranscript(raw) {
+    const content = document.getElementById('content');
+    content.innerHTML = ''; // clear previous
+
+    const lines = raw.split('\n');
+    let currentList = null;
+
+    lines.forEach(line => {
+        line = line.trim();
+        if (!line) return;
+
+        let div;
+        if (line.startsWith('[DATE]')) {
+            div = document.createElement('div');
+            div.className = 'date';
+            div.textContent = 'Data: ' + line.replace('[DATE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[TEACHER]')) {
+            div = document.createElement('div');
+            div.className = 'teacher';
+            div.textContent = 'Nauczyciel: ' + line.replace('[TEACHER]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[LESSON TOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'topic';
+            div.textContent = 'Temat lekcji: ' + line.replace('[LESSON TOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[OBJECTIVE]')) {
+            div = document.createElement('div');
+            div.className = 'objective';
+            div.textContent = 'Cel: ' + line.replace('[OBJECTIVE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUBTOPIC]')) {
+            div = document.createElement('div');
+            div.className = 'subtopic';
+            div.textContent = 'Podtemat: ' + line.replace('[SUBTOPIC]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[EXERCISES]')) {
+            div = document.createElement('div');
+            div.className = 'exercises';
+            div.textContent = 'Ćwiczenia: ' + line.replace('[EXERCISES]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[VOCAB]')) {
+            div = document.createElement('div');
+            div.className = 'vocab';
+            div.textContent = 'Słownictwo: ' + line.replace('[VOCAB]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[CULTURE]')) {
+            div = document.createElement('div');
+            div.className = 'culture';
+            div.textContent = 'Kultura: ' + line.replace('[CULTURE]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[KEY POINTS]')) {
+            div = document.createElement('div');
+            div.className = 'key-points';
+            div.textContent = 'Punkty kluczowe: ' + line.replace('[KEY POINTS]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('[SUMMARY]')) {
+            div = document.createElement('div');
+            div.className = 'summary';
+            div.textContent = 'Podsumowanie: ' + line.replace('[SUMMARY]', '').trim();
+            currentList = null;
+        } else if (line.startsWith('- ')) { // bullet point
+            if (!currentList) {
+                currentList = document.createElement('ul');
+                content.appendChild(currentList);
+            }
+            const li = document.createElement('li');
+            li.textContent = line.substring(2).trim();
+            currentList.appendChild(li);
+            return;
+        } else { // normal paragraph
+            div = document.createElement('p');
+            div.textContent = line;
+            currentList = null;
+        }
+
+        content.appendChild(div);
+    });
+}
+
+// Automatically render transcript on page load
+renderTranscript(rawTranscript);
+</script>
+
+</body>
+</html>
