@@ -1,0 +1,21 @@
+{
+  "name": "Sumupper",
+  "short_name": "SUM",
+  "icons": [
+    {
+      "src": "/pages/api/public/icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pages/api/public/icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#326ec9",
+  "background_color": "#212a73",
+  "display": "standalone"
+}
